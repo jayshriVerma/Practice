@@ -13,15 +13,15 @@ def productExceptSelf(nums):
         right[j] = r
         l *= nums[i]
         r *= nums[j]
-    return [l*r for l,r in zip(left, right)]
+    return [p*q for p,q in zip(left, right)]
 
 
 
-# l= [1,1,2,6]
-# r=[24,12,4,1]
+# left= [1,1,2,6]
+# right=[24,12,4,1]
 # so after setting first element of l and r as 1, later we are updating with product of previous element [1,2,3,4]
-# l=[1,1,1*2,,1*2*3]
-# r=[2*3*4,3*4,4,1] so leaving the last one i.e 1 as starting from right first element right is 1 in place of 4 then 4, then 3*4, then 2*3*4
+# left=[1,1,1*2,,1*2*3]
+# right=[2*3*4,3*4,4,1] 
 # so final result is the product of 1*24 ,1*12,2*4,6*1 so the output is  [24,12,8,6]
 
 if __name__ == "__main__":
